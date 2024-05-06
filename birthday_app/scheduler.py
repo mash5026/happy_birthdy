@@ -14,6 +14,6 @@ def start():
         send_birthday_messages,
         trigger=CronTrigger(
         hour=10,
-        minute=22      
+        minute=49      
     ),)
     scheduler.start()

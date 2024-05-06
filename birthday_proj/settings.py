@@ -138,16 +138,4 @@ X_FRAME_OPTIONS = "SAMEORIGIN"
 SILENCED_SYSTEM_CHECKS = ["security.W019"]
 
 IMPORT_EXPORT_FORMATS = [XLSX, CSV, JSON, YAML, HTML]
-
-CELERY_BROKER_URL = 'redis://localhost:6379/0'
-
-
-CELERY_BEAT_SCHEDULE = {
-    'send_birthday_message_every_minute': {
-        'task':'birthday_app.tasks.send_birthday_message_task',
-        'schedule':60.0,
-    },
-}
-
-
 SCHEDULER_DEFAULT = True
